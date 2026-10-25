@@ -1,0 +1,1 @@
+{"name":"semantic-hypothesis-lab","version":"0.1.0","private":true,"type":"module","scripts":{"sdk":"node scripts/sdk-check.mjs"},"dependencies":{"genlayer-js":"1.1.8","viem":"2.57.7"}}

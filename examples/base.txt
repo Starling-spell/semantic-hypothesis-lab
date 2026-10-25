@@ -1,0 +1,2 @@
+Authored training example: maintenance notice A.
+The change requires no database schema migration. Authentication credentials remain unchanged. No customer-facing outage is planned. Prior approval is explicitly not required.
