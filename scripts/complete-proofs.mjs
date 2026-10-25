@@ -32,6 +32,8 @@ async function tx(step,args,who=0,expected='SUCCESS',message){
 const write=(step,method,args,who=0,expected='SUCCESS',message)=>tx(step,['write',p.address,method,'--args',...args.map(String)],who,expected,message);
 function request(id,fixture='base',bad=false){return [id,'Starling-spell/semantic-hypothesis-lab/'+commit+'/examples/'+fixture+'.txt',bad?'f'.repeat(64):sha(fs.readFileSync('examples/'+fixture+'.txt'))];}
 async function capture(step,id){
+ const captured=p.records.find(x=>x.id===id);
+ if(captured){assert.equal(canonical(await read(p.address,'get_record',[id])),canonical(captured.record));return {record:captured.record,state:captured.space};}
  const record=await read(p.address,'get_record',[id]),state=await read(p.address,'get_space',[]);
  checkSpace(state,state.active);p.records=p.records.filter(x=>x.id!==id);p.records.push({step,id,record,space:state});save();return {record,state};
 }

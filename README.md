@@ -40,7 +40,7 @@ The live workflow uses GenLayer CLI 0.39.2, a dedicated native encrypted test ac
 
 `scripts/complete-proofs.mjs COMMIT` journals intent and native nonce before each serial send. Known hashes are receipt-checked, not rebroadcast. If broadcast returns no hash, stop and audit signer/contract history before retrying. Read-only verification is separate and cannot send a transaction. A finalized execution error is a negative proof, never a successful transition. Native Windows HTTPS remains narrowly restricted to Studio and this repository's pinned fixture paths.
 
-Deployment and live proof results are recorded separately once verified. No portal submission has been made automatically.
+[StudioNet deployment](https://explorer-studio.genlayer.com/address/0x372086B471Aa8E14e8afe9c44D7447719E980494): normalized deployed source SHA-256 `73d79e944151eea61235c4aa1b444837b9c5035429237c8f7b4b0f5c2a8c429b` matches this repository. [Fourteen-receipt proof matrix](LIVE_PROOFS.md), [machine-readable ledger](PROOFS.json), [ready-to-fill submission](SUBMISSION.md). Eight successful executions and six expected errors; candidate sets 158 → 89 → 35 → 0 → 35. Native sender/nonces, source, immutable history, exact contract transaction set and final queries were independently verified read-only. No portal submission has been made automatically.
 
 ## Related work and architecture boundary
 

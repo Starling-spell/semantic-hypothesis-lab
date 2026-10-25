@@ -8,8 +8,13 @@ const child=spawn(process.execPath,['--dns-result-order=ipv4first',...native,'--
 child.stdout.resume();let carry='',known=false;
 const timer=setTimeout(()=>{child.kill();console.error('CLI timeout; inspect known hash before retry');},120000);
 child.stderr.on('data',chunk=>{carry+=chunk.toString();const lines=carry.split(/\r?\n/);carry=lines.pop();
- if(carry.length>65536)carry='';for(const line of lines)if(/^BROADCAST_HASH 0x[0-9a-fA-F]{64}$/.test(line)){known=true;console.log(line);}
+ if(carry.length>65536)carry='';for(const line of lines)if(/^BROADCAST_HASH 0x[0-9a-fA-F]{64}$/.test(line)){
+  known=true;console.log(line);
+  // The RPC has already acknowledged the send. Stop only our CLI child;
+  // the serial parent checks this exact hash, rather than duplicate CLI polling.
+  child.kill();
+ }
 });
 child.on('error',()=>{console.error('CLI launch failed');process.exitCode=1;});
 child.on('close',code=>{clearTimeout(timer);console.log(JSON.stringify({cli_exit:code,hash_observed:known}));
- if(code!==0||!known){process.exitCode=1;console.error('Inspect history before any rebroadcast');}});
+ if(!known){process.exitCode=1;console.error('Inspect history before any rebroadcast');}});

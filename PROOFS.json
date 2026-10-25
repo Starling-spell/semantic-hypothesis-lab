@@ -1,0 +1,1896 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "fixture_commit": "42a0b8c5a2535f960587d9cf2e5cf15675ae2d65",
+  "accounts": [
+    {
+      "name": "studio-proof-deployer",
+      "address": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+    },
+    {
+      "name": "fairresolve-demo",
+      "address": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+    }
+  ],
+  "predicates": [
+    "The notice requires a database schema migration.",
+    "The notice requires rotating authentication credentials.",
+    "The notice announces a planned customer-facing service outage.",
+    "The notice requires prior approval."
+  ],
+  "transactions": [
+    {
+      "step": "deploy",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "deploy",
+        "--contract",
+        "contracts/SemanticHypothesisLab.py",
+        "--args",
+        "The notice requires a database schema migration.",
+        "The notice requires rotating authentication credentials.",
+        "The notice announces a planned customer-facing service outage.",
+        "The notice requires prior approval."
+      ],
+      "nonce_before": "0x18f",
+      "verified": true,
+      "hash": "0x1d86e11b3697f5efa81aeccc5ea7d60740b988d789c8aa3466359f56051cdc76",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "teach-negative",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "base",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt",
+        "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7"
+      ],
+      "nonce_before": "0x190",
+      "verified": true,
+      "hash": "0x828555c842e71a8bbb92f6890c4903341ccb59bb358ad3383dc48e22a0822134",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "teach-positive",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "positive",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/migration.txt",
+        "824be1171bea9f4a026b6a61ba9876d017467bc0f5c3b2fb7a50b06fe933f158"
+      ],
+      "nonce_before": "0x191",
+      "verified": true,
+      "hash": "0x51baef7366214b09ccfcbec347e567e8072d4ab171990253aec77b0d58bb3b22",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "unknown-held",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "uncertain",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/uncertain.txt",
+        "289eeb43684b0333db407a4867e4a5dce48fe92d0e93ed247ab976419947b9fd"
+      ],
+      "nonce_before": "0x192",
+      "verified": true,
+      "hash": "0xb9f95d7c9ab63e75d5649b4240962a658b98e360794e805f6844ee53991814d1",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "hash-mismatch",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "mismatch",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ],
+      "nonce_before": "0x193",
+      "verified": true,
+      "hash": "0xf4469c56a8efa204d6e94ae5874624909cc42cad93df5fa925b55d3086f746b4",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "duplicate-held",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "duplicate",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt",
+        "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7"
+      ],
+      "nonce_before": "0x194",
+      "verified": true,
+      "hash": "0x24f45e1b39cf52439983886d4118257329ef3f01d8664742ef83ad44a16b703e",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "contradiction",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "conflict",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/contradiction.txt",
+        "e089b806415be7cca7e7ee07988277f27159f50b6cd3e2dd61960e7bbfe170a6"
+      ],
+      "nonce_before": "0x195",
+      "verified": true,
+      "hash": "0x3e6bccd75f29dce565e7cc0fff5c2e4f4ea3647b7564164c9e81923e9d532cb9",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "unauthorized-teach",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "peer",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt",
+        "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7"
+      ],
+      "nonce_before": "0x24",
+      "verified": true,
+      "expected_message": "Only teacher",
+      "hash": "0x0cb3aec960ef2efc152f68190bb544ee8388a2de8350bfacdaf33d9b2e396891",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "unauthorized-withdraw",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "withdraw",
+        "--args",
+        "peer-withdraw",
+        "conflict"
+      ],
+      "nonce_before": "0x25",
+      "verified": true,
+      "expected_message": "Only teacher",
+      "hash": "0xaf5832362a642d4552c26525beba729efdcfe7fa6f3f5180a25bb7352dd34777",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "replay",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "base",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/migration.txt",
+        "824be1171bea9f4a026b6a61ba9876d017467bc0f5c3b2fb7a50b06fe933f158"
+      ],
+      "nonce_before": "0x196",
+      "verified": true,
+      "expected_message": "Action ID already used",
+      "hash": "0x42944d4865859120d4aa3c256a306160751a64e52d78f65df00668fc5a42bed7",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "withdraw-recovery",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "withdraw",
+        "--args",
+        "recover",
+        "conflict"
+      ],
+      "nonce_before": "0x197",
+      "verified": true,
+      "hash": "0x7f1d3ecb70686c45179770be33a6548318fa358286c9ec529e4cb9a0cea37674",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 4,
+      "idle_votes": 1,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "repeat-withdraw",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "withdraw",
+        "--args",
+        "again",
+        "conflict"
+      ],
+      "nonce_before": "0x198",
+      "verified": true,
+      "expected_message": "Example is not active",
+      "hash": "0x53f2dc18a01ca945ea172b30f8e2fd2543fbcbfcc5c5c1cf14c99119ef0fe62a",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "unsafe-source",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "unsafe",
+        "https://evil.invalid/x",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "nonce_before": "0x199",
+      "verified": true,
+      "expected_message": "Invalid source",
+      "hash": "0xc170b98bb3460c68fdac4849aafe5ade24b4873facd404fecfa7b3e56ef39695",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "invalid-id",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "teach",
+        "--args",
+        "bad id",
+        "Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt",
+        "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7"
+      ],
+      "nonce_before": "0x19a",
+      "verified": true,
+      "expected_message": "Invalid action ID",
+      "hash": "0x4cd4a7c57aac8f10c86bf9cb83745f7ec7b23fdcb765a3e364ed315e00757349",
+      "cli_exit": 0,
+      "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    }
+  ],
+  "records": [
+    {
+      "step": "teach-negative",
+      "id": "base",
+      "record": {
+        "action": "TEACH",
+        "before_root": "736abe23ac37f30bb77ea2bf3e48aa520038c45b92386f0e47847aea47c4808f",
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "id": "base",
+        "label": 0,
+        "pattern": 0,
+        "report": {
+          "source": {
+            "body": "Authored training example: maintenance notice A.\nThe change requires no database schema migration. Authentication credentials remain unchanged. No customer-facing outage is planned. Prior approval is explicitly not required.\n",
+            "hash": "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt"
+          },
+          "spec": {
+            "action_id": "base",
+            "before_root": "736abe23ac37f30bb77ea2bf3e48aa520038c45b92386f0e47847aea47c4808f",
+            "configuration": {
+              "family": "TWO_TERM_SIGNED_DNF_3",
+              "features": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "target": "The notice requires prior approval."
+            },
+            "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+            "policy": "semantic-hypothesis-lab-v1",
+            "source": {
+              "sha256": "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt"
+            },
+            "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+          },
+          "vector": [
+            "NO",
+            "NO",
+            "NO",
+            "NO"
+          ]
+        },
+        "revision": 1,
+        "root": "75a5952e14ccf1c6ee9a7bc2f90bb9811f6a290a46fb6c9aa5a3da7f432f5a8e",
+        "status": "TAUGHT",
+        "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+      },
+      "space": {
+        "active": [
+          {
+            "id": "base",
+            "label": 0,
+            "pattern": 0
+          }
+        ],
+        "candidates": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          24,
+          26,
+          28,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42,
+          44,
+          46,
+          48,
+          50,
+          52,
+          56,
+          58,
+          60,
+          64,
+          66,
+          68,
+          70,
+          72,
+          74,
+          76,
+          78,
+          80,
+          82,
+          84,
+          88,
+          90,
+          92,
+          96,
+          98,
+          100,
+          102,
+          112,
+          114,
+          116,
+          128,
+          130,
+          132,
+          136,
+          138,
+          140,
+          144,
+          152,
+          160,
+          162,
+          164,
+          168,
+          170,
+          172,
+          174,
+          176,
+          184,
+          186,
+          192,
+          194,
+          196,
+          200,
+          202,
+          204,
+          206,
+          208,
+          216,
+          220,
+          224,
+          226,
+          228,
+          234,
+          236,
+          238,
+          240,
+          242,
+          244,
+          248,
+          250,
+          252
+        ],
+        "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+        "conflict_core": [],
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "count": 89,
+        "next_pattern": 3,
+        "queries": [
+          {
+            "answer": "NO",
+            "no": 89,
+            "pattern": 0,
+            "yes": 0
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 54,
+            "pattern": 1,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 54,
+            "pattern": 2,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 46,
+            "pattern": 3,
+            "yes": 43
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 54,
+            "pattern": 4,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 46,
+            "pattern": 5,
+            "yes": 43
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 46,
+            "pattern": 6,
+            "yes": 43
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 49,
+            "pattern": 7,
+            "yes": 40
+          }
+        ],
+        "revision": 1,
+        "root": "3baca07f02bcec83e3b92addcebc861aba21747fdb3a36e2de93354a2eb266e3",
+        "status": "LEARNING"
+      }
+    },
+    {
+      "step": "teach-positive",
+      "id": "positive",
+      "record": {
+        "action": "TEACH",
+        "before_root": "3baca07f02bcec83e3b92addcebc861aba21747fdb3a36e2de93354a2eb266e3",
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "id": "positive",
+        "label": 1,
+        "pattern": 1,
+        "report": {
+          "source": {
+            "body": "Authored training example: maintenance notice B.\nA database schema migration is mandatory. Authentication credentials remain unchanged. No customer-facing outage is planned. Prior approval is mandatory.\n",
+            "hash": "824be1171bea9f4a026b6a61ba9876d017467bc0f5c3b2fb7a50b06fe933f158",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/migration.txt"
+          },
+          "spec": {
+            "action_id": "positive",
+            "before_root": "3baca07f02bcec83e3b92addcebc861aba21747fdb3a36e2de93354a2eb266e3",
+            "configuration": {
+              "family": "TWO_TERM_SIGNED_DNF_3",
+              "features": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "target": "The notice requires prior approval."
+            },
+            "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+            "policy": "semantic-hypothesis-lab-v1",
+            "source": {
+              "sha256": "824be1171bea9f4a026b6a61ba9876d017467bc0f5c3b2fb7a50b06fe933f158",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/migration.txt"
+            },
+            "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+          },
+          "vector": [
+            "YES",
+            "NO",
+            "NO",
+            "YES"
+          ]
+        },
+        "revision": 2,
+        "root": "f69137815ecbad267e827173ee7d67e05724d3c1c0708fcb29e3e536d91be520",
+        "status": "TAUGHT",
+        "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+      },
+      "space": {
+        "active": [
+          {
+            "id": "base",
+            "label": 0,
+            "pattern": 0
+          },
+          {
+            "id": "positive",
+            "label": 1,
+            "pattern": 1
+          }
+        ],
+        "candidates": [
+          2,
+          6,
+          10,
+          14,
+          18,
+          26,
+          34,
+          38,
+          42,
+          46,
+          50,
+          58,
+          66,
+          70,
+          74,
+          78,
+          82,
+          90,
+          98,
+          102,
+          114,
+          130,
+          138,
+          162,
+          170,
+          174,
+          186,
+          194,
+          202,
+          206,
+          226,
+          234,
+          238,
+          242,
+          250
+        ],
+        "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+        "conflict_core": [],
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "count": 35,
+        "next_pattern": 3,
+        "queries": [
+          {
+            "answer": "NO",
+            "no": 35,
+            "pattern": 0,
+            "yes": 0
+          },
+          {
+            "answer": "YES",
+            "no": 0,
+            "pattern": 1,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 2,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 3,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 4,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 5,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 18,
+            "pattern": 6,
+            "yes": 17
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 21,
+            "pattern": 7,
+            "yes": 14
+          }
+        ],
+        "revision": 2,
+        "root": "b57000df492d445cfbf170db037b9a0165f4884cf1fba5b6a438ae034eade768",
+        "status": "LEARNING"
+      }
+    },
+    {
+      "step": "unknown-held",
+      "id": "uncertain",
+      "record": {
+        "action": "TEACH",
+        "before_root": "b57000df492d445cfbf170db037b9a0165f4884cf1fba5b6a438ae034eade768",
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "id": "uncertain",
+        "label": -1,
+        "pattern": -1,
+        "report": {
+          "source": {
+            "body": "Authored training example: maintenance notice D.\nWhether a database schema migration is required is undecided. Authentication credentials remain unchanged. No customer-facing outage is planned. Prior approval is mandatory.\n",
+            "hash": "289eeb43684b0333db407a4867e4a5dce48fe92d0e93ed247ab976419947b9fd",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/uncertain.txt"
+          },
+          "spec": {
+            "action_id": "uncertain",
+            "before_root": "b57000df492d445cfbf170db037b9a0165f4884cf1fba5b6a438ae034eade768",
+            "configuration": {
+              "family": "TWO_TERM_SIGNED_DNF_3",
+              "features": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "target": "The notice requires prior approval."
+            },
+            "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+            "policy": "semantic-hypothesis-lab-v1",
+            "source": {
+              "sha256": "289eeb43684b0333db407a4867e4a5dce48fe92d0e93ed247ab976419947b9fd",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/uncertain.txt"
+            },
+            "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+          },
+          "vector": [
+            "UNKNOWN",
+            "NO",
+            "NO",
+            "YES"
+          ]
+        },
+        "revision": 3,
+        "root": "55317aefe6700556496694decd236faab928fadf42d8bade8a8a6c6d2b1032f0",
+        "status": "UNCERTAIN",
+        "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+      },
+      "space": {
+        "active": [
+          {
+            "id": "base",
+            "label": 0,
+            "pattern": 0
+          },
+          {
+            "id": "positive",
+            "label": 1,
+            "pattern": 1
+          }
+        ],
+        "candidates": [
+          2,
+          6,
+          10,
+          14,
+          18,
+          26,
+          34,
+          38,
+          42,
+          46,
+          50,
+          58,
+          66,
+          70,
+          74,
+          78,
+          82,
+          90,
+          98,
+          102,
+          114,
+          130,
+          138,
+          162,
+          170,
+          174,
+          186,
+          194,
+          202,
+          206,
+          226,
+          234,
+          238,
+          242,
+          250
+        ],
+        "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+        "conflict_core": [],
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "count": 35,
+        "next_pattern": 3,
+        "queries": [
+          {
+            "answer": "NO",
+            "no": 35,
+            "pattern": 0,
+            "yes": 0
+          },
+          {
+            "answer": "YES",
+            "no": 0,
+            "pattern": 1,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 2,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 3,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 4,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 5,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 18,
+            "pattern": 6,
+            "yes": 17
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 21,
+            "pattern": 7,
+            "yes": 14
+          }
+        ],
+        "revision": 3,
+        "root": "b3daa11dd7753c92751db7c8c6f0e21ff87b97772ff37be9df34b5d5a1178f8f",
+        "status": "LEARNING"
+      }
+    },
+    {
+      "step": "hash-mismatch",
+      "id": "mismatch",
+      "record": {
+        "action": "TEACH",
+        "before_root": "b3daa11dd7753c92751db7c8c6f0e21ff87b97772ff37be9df34b5d5a1178f8f",
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "id": "mismatch",
+        "label": -1,
+        "pattern": -1,
+        "report": {
+          "source": {
+            "body": "Authored training example: maintenance notice A.\nThe change requires no database schema migration. Authentication credentials remain unchanged. No customer-facing outage is planned. Prior approval is explicitly not required.\n",
+            "hash": "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7",
+            "http": 200,
+            "status": "HASH_MISMATCH",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt"
+          },
+          "spec": {
+            "action_id": "mismatch",
+            "before_root": "b3daa11dd7753c92751db7c8c6f0e21ff87b97772ff37be9df34b5d5a1178f8f",
+            "configuration": {
+              "family": "TWO_TERM_SIGNED_DNF_3",
+              "features": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "target": "The notice requires prior approval."
+            },
+            "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+            "policy": "semantic-hypothesis-lab-v1",
+            "source": {
+              "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt"
+            },
+            "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+          },
+          "vector": []
+        },
+        "revision": 4,
+        "root": "ce8d6c566b8ecab339fcb4649998ccb63aa7ee113265e17f39218558b654599d",
+        "status": "HELD",
+        "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+      },
+      "space": {
+        "active": [
+          {
+            "id": "base",
+            "label": 0,
+            "pattern": 0
+          },
+          {
+            "id": "positive",
+            "label": 1,
+            "pattern": 1
+          }
+        ],
+        "candidates": [
+          2,
+          6,
+          10,
+          14,
+          18,
+          26,
+          34,
+          38,
+          42,
+          46,
+          50,
+          58,
+          66,
+          70,
+          74,
+          78,
+          82,
+          90,
+          98,
+          102,
+          114,
+          130,
+          138,
+          162,
+          170,
+          174,
+          186,
+          194,
+          202,
+          206,
+          226,
+          234,
+          238,
+          242,
+          250
+        ],
+        "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+        "conflict_core": [],
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "count": 35,
+        "next_pattern": 3,
+        "queries": [
+          {
+            "answer": "NO",
+            "no": 35,
+            "pattern": 0,
+            "yes": 0
+          },
+          {
+            "answer": "YES",
+            "no": 0,
+            "pattern": 1,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 2,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 3,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 4,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 5,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 18,
+            "pattern": 6,
+            "yes": 17
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 21,
+            "pattern": 7,
+            "yes": 14
+          }
+        ],
+        "revision": 4,
+        "root": "73b1b5e5e83b4251b42b5dd5e697855f5626bb09dfda7eeb56b7a5e9b9dd38d4",
+        "status": "LEARNING"
+      }
+    },
+    {
+      "step": "duplicate-held",
+      "id": "duplicate",
+      "record": {
+        "action": "TEACH",
+        "before_root": "73b1b5e5e83b4251b42b5dd5e697855f5626bb09dfda7eeb56b7a5e9b9dd38d4",
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "id": "duplicate",
+        "label": -1,
+        "pattern": -1,
+        "report": {
+          "source": {
+            "body": "Authored training example: maintenance notice A.\nThe change requires no database schema migration. Authentication credentials remain unchanged. No customer-facing outage is planned. Prior approval is explicitly not required.\n",
+            "hash": "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt"
+          },
+          "spec": {
+            "action_id": "duplicate",
+            "before_root": "73b1b5e5e83b4251b42b5dd5e697855f5626bb09dfda7eeb56b7a5e9b9dd38d4",
+            "configuration": {
+              "family": "TWO_TERM_SIGNED_DNF_3",
+              "features": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "target": "The notice requires prior approval."
+            },
+            "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+            "policy": "semantic-hypothesis-lab-v1",
+            "source": {
+              "sha256": "6fe91b909e208c94beffc6f760dd5c0ac6d40ac94b9dbfe263f13d1cef675bf7",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/base.txt"
+            },
+            "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+          },
+          "vector": [
+            "NO",
+            "NO",
+            "NO",
+            "NO"
+          ]
+        },
+        "revision": 5,
+        "root": "5383a86106515158b728637567e7cee62bae8e6ed05ec398c309f6dd8bf7a3c7",
+        "status": "DUPLICATE_HELD",
+        "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+      },
+      "space": {
+        "active": [
+          {
+            "id": "base",
+            "label": 0,
+            "pattern": 0
+          },
+          {
+            "id": "positive",
+            "label": 1,
+            "pattern": 1
+          }
+        ],
+        "candidates": [
+          2,
+          6,
+          10,
+          14,
+          18,
+          26,
+          34,
+          38,
+          42,
+          46,
+          50,
+          58,
+          66,
+          70,
+          74,
+          78,
+          82,
+          90,
+          98,
+          102,
+          114,
+          130,
+          138,
+          162,
+          170,
+          174,
+          186,
+          194,
+          202,
+          206,
+          226,
+          234,
+          238,
+          242,
+          250
+        ],
+        "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+        "conflict_core": [],
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "count": 35,
+        "next_pattern": 3,
+        "queries": [
+          {
+            "answer": "NO",
+            "no": 35,
+            "pattern": 0,
+            "yes": 0
+          },
+          {
+            "answer": "YES",
+            "no": 0,
+            "pattern": 1,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 2,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 3,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 4,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 5,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 18,
+            "pattern": 6,
+            "yes": 17
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 21,
+            "pattern": 7,
+            "yes": 14
+          }
+        ],
+        "revision": 5,
+        "root": "89b6b7ca83732d83bcbac728d2616aa9e538992eda7c12f587f957cbbb99c04b",
+        "status": "LEARNING"
+      }
+    },
+    {
+      "step": "contradiction",
+      "id": "conflict",
+      "record": {
+        "action": "TEACH",
+        "before_root": "89b6b7ca83732d83bcbac728d2616aa9e538992eda7c12f587f957cbbb99c04b",
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "id": "conflict",
+        "label": 0,
+        "pattern": 1,
+        "report": {
+          "source": {
+            "body": "Authored training example: maintenance notice C.\nA database schema migration is mandatory. Authentication credentials remain unchanged. No customer-facing outage is planned. Prior approval is explicitly not required.\nThis describes a different authored example, not a correction to another notice.\n",
+            "hash": "e089b806415be7cca7e7ee07988277f27159f50b6cd3e2dd61960e7bbfe170a6",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/contradiction.txt"
+          },
+          "spec": {
+            "action_id": "conflict",
+            "before_root": "89b6b7ca83732d83bcbac728d2616aa9e538992eda7c12f587f957cbbb99c04b",
+            "configuration": {
+              "family": "TWO_TERM_SIGNED_DNF_3",
+              "features": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "target": "The notice requires prior approval."
+            },
+            "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+            "policy": "semantic-hypothesis-lab-v1",
+            "source": {
+              "sha256": "e089b806415be7cca7e7ee07988277f27159f50b6cd3e2dd61960e7bbfe170a6",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-hypothesis-lab/42a0b8c5a2535f960587d9cf2e5cf15675ae2d65/examples/contradiction.txt"
+            },
+            "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+          },
+          "vector": [
+            "YES",
+            "NO",
+            "NO",
+            "NO"
+          ]
+        },
+        "revision": 6,
+        "root": "4157a1716d0f889efe11425a77df8a2de02013945a92811b9295dbf94094d312",
+        "status": "TAUGHT",
+        "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+      },
+      "space": {
+        "active": [
+          {
+            "id": "base",
+            "label": 0,
+            "pattern": 0
+          },
+          {
+            "id": "positive",
+            "label": 1,
+            "pattern": 1
+          },
+          {
+            "id": "conflict",
+            "label": 0,
+            "pattern": 1
+          }
+        ],
+        "candidates": [],
+        "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+        "conflict_core": [
+          "positive",
+          "conflict"
+        ],
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "count": 0,
+        "next_pattern": -1,
+        "queries": [
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 0,
+            "yes": 0
+          },
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 1,
+            "yes": 0
+          },
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 2,
+            "yes": 0
+          },
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 3,
+            "yes": 0
+          },
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 4,
+            "yes": 0
+          },
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 5,
+            "yes": 0
+          },
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 6,
+            "yes": 0
+          },
+          {
+            "answer": "CONTRADICTORY",
+            "no": 0,
+            "pattern": 7,
+            "yes": 0
+          }
+        ],
+        "revision": 6,
+        "root": "6c92ab7ddadf7bf12342dee88cc6e7fe278bc3c0ca4e2df8953a908363bb5908",
+        "status": "CONTRADICTORY"
+      }
+    },
+    {
+      "step": "withdraw-recovery",
+      "id": "recover",
+      "record": {
+        "action": "WITHDRAW",
+        "before_root": "6c92ab7ddadf7bf12342dee88cc6e7fe278bc3c0ca4e2df8953a908363bb5908",
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "example_id": "conflict",
+        "id": "recover",
+        "revision": 7,
+        "root": "40b0c8bb7fe5d8a651694f689bcaec4843a21a1f2bfa1c6918c985594a3efb88",
+        "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+      },
+      "space": {
+        "active": [
+          {
+            "id": "base",
+            "label": 0,
+            "pattern": 0
+          },
+          {
+            "id": "positive",
+            "label": 1,
+            "pattern": 1
+          }
+        ],
+        "candidates": [
+          2,
+          6,
+          10,
+          14,
+          18,
+          26,
+          34,
+          38,
+          42,
+          46,
+          50,
+          58,
+          66,
+          70,
+          74,
+          78,
+          82,
+          90,
+          98,
+          102,
+          114,
+          130,
+          138,
+          162,
+          170,
+          174,
+          186,
+          194,
+          202,
+          206,
+          226,
+          234,
+          238,
+          242,
+          250
+        ],
+        "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+        "conflict_core": [],
+        "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+        "count": 35,
+        "next_pattern": 3,
+        "queries": [
+          {
+            "answer": "NO",
+            "no": 35,
+            "pattern": 0,
+            "yes": 0
+          },
+          {
+            "answer": "YES",
+            "no": 0,
+            "pattern": 1,
+            "yes": 35
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 2,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 3,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 25,
+            "pattern": 4,
+            "yes": 10
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 17,
+            "pattern": 5,
+            "yes": 18
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 18,
+            "pattern": 6,
+            "yes": 17
+          },
+          {
+            "answer": "UNDETERMINED",
+            "no": 21,
+            "pattern": 7,
+            "yes": 14
+          }
+        ],
+        "revision": 7,
+        "root": "63a9cd5ffae5c672d9bddff2723a8340aedd3dc45842b79965efe9d34db0ca91",
+        "status": "LEARNING"
+      }
+    }
+  ],
+  "final_readback_verified": true,
+  "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+  "source": {
+    "address": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+    "source_match": true,
+    "sha256": "73d79e944151eea61235c4aa1b444837b9c5035429237c8f7b4b0f5c2a8c429b"
+  },
+  "configuration": {
+    "active_limit": 16,
+    "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+    "family_size": 158,
+    "policy": "semantic-hypothesis-lab-v1",
+    "predicates": {
+      "family": "TWO_TERM_SIGNED_DNF_3",
+      "features": [
+        "The notice requires a database schema migration.",
+        "The notice requires rotating authentication credentials.",
+        "The notice announces a planned customer-facing service outage."
+      ],
+      "target": "The notice requires prior approval."
+    },
+    "teacher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+  },
+  "initial_space": {
+    "active": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      42,
+      44,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      55,
+      56,
+      58,
+      59,
+      60,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      74,
+      76,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      87,
+      88,
+      90,
+      92,
+      93,
+      95,
+      96,
+      98,
+      100,
+      102,
+      112,
+      114,
+      115,
+      116,
+      117,
+      119,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      143,
+      144,
+      145,
+      152,
+      153,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      168,
+      170,
+      171,
+      172,
+      174,
+      175,
+      176,
+      177,
+      179,
+      184,
+      186,
+      187,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      200,
+      202,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      213,
+      216,
+      220,
+      221,
+      224,
+      226,
+      228,
+      234,
+      236,
+      238,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      248,
+      250,
+      252,
+      255
+    ],
+    "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+    "conflict_core": [],
+    "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+    "count": 158,
+    "next_pattern": 0,
+    "queries": [
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 0,
+        "yes": 69
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 1,
+        "yes": 69
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 2,
+        "yes": 69
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 3,
+        "yes": 69
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 4,
+        "yes": 69
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 5,
+        "yes": 69
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 6,
+        "yes": 69
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 89,
+        "pattern": 7,
+        "yes": 69
+      }
+    ],
+    "revision": 0,
+    "root": "736abe23ac37f30bb77ea2bf3e48aa520038c45b92386f0e47847aea47c4808f",
+    "status": "LEARNING"
+  },
+  "recovery_verified": true,
+  "workflow_complete": true,
+  "contract_history_matched": true,
+  "final_space": {
+    "active": [
+      {
+        "id": "base",
+        "label": 0,
+        "pattern": 0
+      },
+      {
+        "id": "positive",
+        "label": 1,
+        "pattern": 1
+      }
+    ],
+    "candidates": [
+      2,
+      6,
+      10,
+      14,
+      18,
+      26,
+      34,
+      38,
+      42,
+      46,
+      50,
+      58,
+      66,
+      70,
+      74,
+      78,
+      82,
+      90,
+      98,
+      102,
+      114,
+      130,
+      138,
+      162,
+      170,
+      174,
+      186,
+      194,
+      202,
+      206,
+      226,
+      234,
+      238,
+      242,
+      250
+    ],
+    "configuration_root": "145d0de240410d5cd4f52fc9b3d74db006431328167f4a26b7aa5d904773c063",
+    "conflict_core": [],
+    "contract": "0x372086B471Aa8E14e8afe9c44D7447719E980494",
+    "count": 35,
+    "next_pattern": 3,
+    "queries": [
+      {
+        "answer": "NO",
+        "no": 35,
+        "pattern": 0,
+        "yes": 0
+      },
+      {
+        "answer": "YES",
+        "no": 0,
+        "pattern": 1,
+        "yes": 35
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 25,
+        "pattern": 2,
+        "yes": 10
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 17,
+        "pattern": 3,
+        "yes": 18
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 25,
+        "pattern": 4,
+        "yes": 10
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 17,
+        "pattern": 5,
+        "yes": 18
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 18,
+        "pattern": 6,
+        "yes": 17
+      },
+      {
+        "answer": "UNDETERMINED",
+        "no": 21,
+        "pattern": 7,
+        "yes": 14
+      }
+    ],
+    "revision": 7,
+    "root": "63a9cd5ffae5c672d9bddff2723a8340aedd3dc45842b79965efe9d34db0ca91",
+    "status": "LEARNING"
+  }
+}
